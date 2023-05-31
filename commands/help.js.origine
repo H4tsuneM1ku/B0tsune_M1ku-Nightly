@@ -1,0 +1,25 @@
+const Discord = require('discord.js');
+
+exports.run = (bot, message, args) => {
+  message.reply(' vérifiez vos messages privés.');
+  let AvaBot = bot.user.displayAvatarURL
+  let embed = new Discord.RichEmbed()
+  .setAuthor(`COMMANDES DE ${bot.user.username}`)
+  .setDescription("⚠️ Les commandes suivantes sont susceptibles d'évoluer.")
+  .setThumbnail(AvaBot)
+  .addField("Préfix:", prefix+' ', true)
+  .addField("🏓 Afficher le ping du bot:", "ping", true)
+  .addField("Faire dire un message au bot:", "say", true)
+  .addField("Poser une question au 8Ball", "8ball", true)
+  .addField("Lister les emotes:", "emotes", true)
+  .addField("📷 Afficher votre avatar ou celui d'un membre:", "avatar < @membre >", true)
+  .addField("ℹ️ Afficher les informations à propos de vous ou d'un membre:", "user < @membre >", true)
+  .addField("ℹ️ Afficher les informations à propos du serveur:", "server", true)
+  .addField("ℹ️ Afficher les informations sur le bot:", "info", true)
+  .addField("🗑 Effacer les messages du salon (🔒 Modération):", "clear < 2 à 100 >", true)
+  .addField("👢 Kicker un membre (🔒 Modération):", "kick < @membre >", true)
+  .addField("🔨 Bannir un membre (🔒 Modération):", "ban < @membre >", true)
+  .setColor(0x7700cf)
+  /*.setTimestamp()*/
+message.author.send(embed);
+};

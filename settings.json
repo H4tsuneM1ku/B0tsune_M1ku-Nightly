@@ -1,0 +1,10 @@
+{
+  "token": "",
+  "prefix": "n.",
+  "ownerID": "258394351628058636",
+  "commandInhibitors": [
+    "disable",
+    "permissions",
+    "missingBotPermissions"
+  ]
+}
